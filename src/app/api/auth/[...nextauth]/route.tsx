@@ -1,4 +1,4 @@
-// lib/authOptions.js
+import NextAuth from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
 
 export const authOptions = {
@@ -9,4 +9,11 @@ export const authOptions = {
     }),
   ],
   secret: process.env.NEXTAUTH_SECRET,
+  pages: {
+    signIn: "/", // Redirects to home after login (no login page)
+  },
+ 
 };
+
+const handler = NextAuth(authOptions);
+export { handler as GET, handler as POST };
