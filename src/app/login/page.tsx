@@ -1,13 +1,12 @@
 
-import Image from "next/image";
 
-import { signIn, signOut, useSession } from "next-auth/react";
+import { signIn, useSession } from "next-auth/react";
 
 export default function Login() {
   const { data: session, status } = useSession();
 
   const handleGoogleSignIn = async () => {
-    const result = await signIn('google', { callbackUrl: `${window.location.origin}/home` });
+    const result = await signIn('google', { callbackUrl: `${window.location.origin}/home`,  redirect: true  });
 
 
     if (result?.error) {
@@ -15,10 +14,7 @@ export default function Login() {
     }
   };
 
-  if (status === "loading") {
-    // Show loading indicator while checking session status
-    return <div>Loading...</div>;
-  }
+
 
   // if (session) {
   //   // User is signed in, show a logout button or redirect them

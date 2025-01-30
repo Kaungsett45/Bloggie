@@ -1,3 +1,6 @@
+import express from 'express'; // Use `import` instead of `require()`
+
+
 require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
