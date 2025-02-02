@@ -119,32 +119,3 @@ export default function Login() {
 }
 
 
-
-
-//   return (
-//     <nav className="flex justify-between items-center p-4 bg-gray-800 text-white">
-//       <h1 className="text-xl font-bold">My App</h1>
-//       <div>
-//         {session ? (
-//           <div className="flex items-center gap-4">
-//             <img src={session.user.image} alt="Profile" className="w-8 h-8 rounded-full" />
-//             <span>{session.user.name}</span>
-//             <button
-//               onClick={() => signOut()}
-//               className="px-4 py-2 bg-red-500 rounded-md"
-//             >
-//               Sign Out
-//             </button>
-//           </div>
-//         ) : (
-//           <button
-//             onClick={() => signIn("google")}
-//             className="px-4 py-2 bg-blue-500 rounded-md"
-//           >
-//             Sign In with Google
-//           </button>
-//         )}
-//       </div>
-//     </nav>
-//   );
-// }
