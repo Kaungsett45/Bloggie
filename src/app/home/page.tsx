@@ -31,7 +31,7 @@ export default function Home() {
             <input 
               type="text" 
               placeholder="Search user..." 
-              className="text-black bg-blue-200 p-2 pl-10 rounded-md focus:outline-none  w-64"
+              className="text-black border-black border-2  p-2 pl-10 rounded-md focus:outline-none  w-64"
             />
             {/* Search Icon */}
             <FaSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500" />
@@ -42,7 +42,11 @@ export default function Home() {
          
           </div>
            </div>
-
+           {/**Post create  */}
+          <div className="mt-2 flex justify-center">
+            <button className="font-semibold text-black border-2 border-black px-4 py-2 rounded-full mx-2 shadow-lg">Create Blog</button>
+          
+          </div>
           
 </>   ) : (
         <p>You are not logged in.</p>
